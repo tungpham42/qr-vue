@@ -1,4 +1,4 @@
-# qr-vue
+# [https://taomaqr.netlify.app/](https://taomaqr.netlify.app/)
 
 ## Project setup
 ```
