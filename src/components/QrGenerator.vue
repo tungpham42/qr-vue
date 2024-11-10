@@ -1,21 +1,21 @@
 <template>
   <div class="container mt-5">
-    <h1 class="text-center">QR Code Generator</h1>
+    <h1 class="text-center">Tạo mã QR</h1>
     <div class="form-group">
-      <label for="textInput">Enter Text to Generate QR Code:</label>
+      <label for="textInput">Điền chữ hoặc URL để tạo mã QR:</label>
       <input
         type="text"
         id="textInput"
         v-model="text"
         class="form-control"
-        placeholder="Type here..."
+        placeholder="Điền vào đây..."
         required
       />
     </div>
 
     <!-- QR Code Size Selection -->
     <div class="form-group mt-3">
-      <label for="sizeSelect">Select QR Code Size:</label>
+      <label for="sizeSelect">Chọn kích thước:</label>
       <select v-model="size" class="form-control" id="sizeSelect">
         <option value="100">100x100</option>
         <option value="150">150x150</option>
@@ -33,13 +33,13 @@
       class="btn btn-primary mt-3 mx-auto d-block"
       @click="generateQRCode"
     >
-      Generate QR Code
+      Tạo mã QR
     </button>
 
-    <div class="text-center mt-4" v-if="qrCodeDataUrl">
+    <div class="text-center mt-0" v-if="qrCodeDataUrl">
       <img
         :src="qrCodeDataUrl"
-        :alt="`QR Code for ${text}`"
+        :alt="`Mã QR cho ${text}`"
         :width="size"
         :height="size"
       />
@@ -48,9 +48,9 @@
       <a
         :href="qrCodeDataUrl"
         :download="fileName"
-        class="btn btn-success mt-3"
+        class="btn btn-success mt-0"
       >
-        Download QR Code
+        Tải về mã QR
       </a>
     </div>
   </div>
