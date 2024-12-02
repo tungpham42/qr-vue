@@ -16,7 +16,7 @@
     <!-- QR Code Size Selection -->
     <div class="form-group mt-3">
       <label for="sizeSelect">Chọn kích thước:</label>
-      <select v-model="size" class="form-control" id="sizeSelect">
+      <select v-model="size" class="form-control form-select" id="sizeSelect">
         <option value="100">100x100</option>
         <option value="150">150x150</option>
         <option value="200">200x200</option>
