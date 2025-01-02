@@ -30,7 +30,7 @@
     </div>
 
     <button
-      class="btn btn-primary mt-3 mx-auto d-block"
+      class="btn btn-primary my-3 mx-auto d-block"
       @click="generateQRCode"
     >
       Tạo mã QR
@@ -48,7 +48,7 @@
       <a
         :href="qrCodeDataUrl"
         :download="fileName"
-        class="btn btn-success mt-0"
+        class="btn btn-success mt-3"
       >
         Tải về mã QR
       </a>
@@ -78,6 +78,7 @@ export default {
         const options = {
           width: this.size, // set the width based on selected size
           height: this.size,
+          margin: 0, // remove the white border
         };
         this.qrCodeDataUrl = await QRCode.toDataURL(this.text, options);
       } catch (error) {
