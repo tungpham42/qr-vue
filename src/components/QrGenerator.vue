@@ -26,6 +26,8 @@
         <option value="400">400x400</option>
         <option value="450">450x450</option>
         <option value="500">500x500</option>
+        <option value="750">750x750</option>
+        <option value="1000">1000x1000</option>
       </select>
     </div>
 
@@ -91,7 +93,7 @@ export default {
 
 <style scoped>
 .container {
-  max-width: 600px;
+  max-width: 1080px;
 }
 img {
   max-width: 100%;
